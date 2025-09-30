@@ -1,0 +1,253 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 400;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Navigation Styles */
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    line-height: 36.48px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.7;
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.container-wide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Hero Section (HOME & ABOUT pages) */
+.hero-section, .about-section {
+    text-align: left;
+}
+
+.hero-title, .about-title {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: 0px;
+    line-height: 1.2;
+}
+
+.hero-subtitle, .about-subtitle {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    opacity: 0.8;
+    letter-spacing: 0px;
+    line-height: 1.4;
+}
+
+/* IDEA Page Styles */
+.idea-page {
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 0px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    background-color: #f5f5f5;
+    background-image: 
+        linear-gradient(45deg, #f0f0f0 25%, transparent 25%), 
+        linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #f0f0f0 75%), 
+        linear-gradient(-45deg, transparent 75%, #f0f0f0 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    position: relative;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 10px;
+    letter-spacing: 0px;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-family: 'Martel Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    opacity: 0.8;
+    letter-spacing: 0px;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .nav-container {
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .hero-title, .about-title {
+        font-size: 36px;
+    }
+    
+    .container, .container-wide {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .nav-container {
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+    }
+    
+    .hero-title, .about-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle, .about-subtitle {
+        font-size: 16px;
+    }
+    
+    .main-content {
+        margin-top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-container {
+        gap: 15px;
+        padding: 0 10px;
+    }
+    
+    .nav-link {
+        font-size: 14px;
+    }
+    
+    .hero-title, .about-title {
+        font-size: 24px;
+    }
+    
+    .hero-subtitle, .about-subtitle {
+        font-size: 14px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+    }
+    
+    .card-text {
+        font-size: 13px;
+    }
+}
