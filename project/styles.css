@@ -79,7 +79,7 @@ body {
 .container-wide {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 0px 0px 0px 0px;
+    padding: 40px 40px 40px 40px;
 }
 
 /* Hero Section (HOME & ABOUT pages) */
@@ -89,7 +89,7 @@ body {
 
 .hero-title, .about-title {
     font-family: 'Martel Sans', sans-serif;
-    font-size: 48px;
+    font-size: 60px;
     font-weight: 400;
     color: #000000;
     margin-bottom: 20px;
