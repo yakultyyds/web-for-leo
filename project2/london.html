@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London - FIELD TRIP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/london.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <div class="header-section">
+                <h1 class="city-title zoom-in" style="animation-delay: 0s">London</h1>
+                <div class="button-group">
+                    <button onclick="toggleGrayscale()" class="btn slide-in" style="animation-delay: 0.1s">Toggle Color</button>
+                    <button onclick="shuffleGallery()" class="btn slide-in" style="animation-delay: 0.2s">Shuffle Photos</button>
+                    <a href="index.html" class="btn slide-in" style="animation-delay: 0.3s">Back to Home</a>
+                </div>
+            </div>
+            
+            <div id="gallery" class="gallery-grid">
+                <div class="gallery-item slide-in" style="animation-delay: 0.4s" onclick="openModal(0)">
+                    <img src="image/london.jpg" alt="Big Ben">
+                    <div class="overlay">
+                        <div class="caption">Millennium Bridge & St. Paul's Cathedral, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item slide-in" style="animation-delay: 0.5s" onclick="openModal(1)">
+                    <img src="image/london1.jpg" alt="Tower Bridge">
+                    <div class="overlay">
+                        <div class="caption">British Museum, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item slide-in" style="animation-delay: 0.6s" onclick="openModal(2)">
+                    <img src="image/london2.jpg" alt="London Eye">
+                    <div class="overlay">
+                        <div class="caption">Barbican Centre, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item slide-in" style="animation-delay: 0.7s" onclick="openModal(3)">
+                    <img src="image/london3.jpg" alt="Buckingham Palace">
+                    <div class="overlay">
+                        <div class="caption">Barbican Centre, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item slide-in" style="animation-delay: 0.8s" onclick="openModal(4)">
+                    <img src="image/london4.jpg" alt="Westminster Abbey">
+                    <div class="overlay">
+                        <div class="caption">London Eye, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item slide-in" style="animation-delay: 0.9s" onclick="openModal(5)">
+                    <img src="image/london5.jpg" alt="Hyde Park">
+                    <div class="overlay">
+                        <div class="caption">St. Paul's Cathedral, 2025</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modal-image" src="" alt="">
+            <div class="modal-text" id="modal-text"></div>
+            <button onclick="closeModal()" class="btn modal-close-btn">Close</button>
+        </div>
+    </div>
+    
+    <footer>
+            <p>© 2025 [Yuanfeng Luo] — Digital Garden Project02</p>
+        </footer>
+    <script src="scripts/london.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edinburgh - FIELD TRIP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/edinburgh.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <div class="header-section fade-in">
+                <h1 class="city-title">Edinburgh</h1>
+                <div class="button-group">
+                    <button onclick="toggleGrayscale()" class="btn">Toggle Color</button>
+                    <button onclick="shuffleGallery()" class="btn">Shuffle Photos</button>
+                    <a href="index.html" class="btn">Back to Home</a>
+                </div>
+            </div>
+            
+            <div id="gallery" class="gallery-grid">
+                <div class="gallery-item fade-in-delay" style="animation-delay: 0.1s" onclick="openModal(0)">
+                    <img src="image/edinburgh.jpg" alt="Edinburgh Castle">
+                    <div class="overlay">
+                        <div class="caption">Princes Street, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in-delay" style="animation-delay: 0.2s" onclick="openModal(1)">
+                    <img src="image/edinburgh3.jpg" alt="Royal Mile">
+                    <div class="overlay">
+                        <div class="caption">Arthur's Seat, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in-delay" style="animation-delay: 0.3s" onclick="openModal(2)">
+                    <img src="image/edinburgh2.jpg" alt="Arthur's Seat">
+                    <div class="overlay">
+                        <div class="caption">Arthur's Seat, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in-delay" style="animation-delay: 0.4s" onclick="openModal(3)">
+                    <img src="image/edinburgh1.jpg" alt="Street Shot">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in-delay" style="animation-delay: 0.5s" onclick="openModal(4)">
+                    <img src="image/edinburgh4.jpg" alt="Street Shot">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fade-in-delay" style="animation-delay: 0.6s" onclick="openModal(5)">
+                    <img src="image/edinburgh5.jpg" alt="Scott Monument">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                
+                
+               
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modal-image" src="" alt="">
+            <div class="modal-text" id="modal-text"></div>
+            <button onclick="closeModal()" class="btn modal-close-btn">Close</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 [Yuanfeng Luo] — Digital Garden Project02</p>
+    </footer>
+    
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/edinburgh.js"></script>
+</body>
+</html>

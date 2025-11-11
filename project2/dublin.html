@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dublin - FIELD TRIP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/dublin.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="content-wrapper">
+            <div class="header-section">
+                <h1 class="city-title bloom" style="animation-delay: 0s">Dublin</h1>
+                <div class="button-group">
+                    <button onclick="toggleGrayscale()" class="btn bloom" style="animation-delay: 0.1s">Toggle Color</button>
+                    <button onclick="shuffleGallery()" class="btn bloom" style="animation-delay: 0.2s">Shuffle Photos</button>
+                    <a href="index.html" class="btn bloom" style="animation-delay: 0.3s">Back to Home</a>
+                </div>
+            </div>
+            
+            <div id="gallery" class="gallery-grid">
+                <div class="gallery-item bloom" style="animation-delay: 0.4s" onclick="openModal(0)">
+                    <img src="image/dublin.jpg" alt="Trinity College">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item bloom" style="animation-delay: 0.5s" onclick="openModal(1)">
+                    <img src="image/dublin1.jpg" alt="Temple Bar">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item bloom" style="animation-delay: 0.6s" onclick="openModal(2)">
+                    <img src="image/dublin2.jpg" alt="Dublin Castle">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item bloom" style="animation-delay: 0.7s" onclick="openModal(3)">
+                    <img src="image/dublin3.jpg" alt="Ha'penny Bridge">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item bloom" style="animation-delay: 0.8s" onclick="openModal(4)">
+                    <img src="image/dublin4.jpg" alt="St. Stephen's Green">
+                    <div class="overlay">
+                        <div class="caption">American Embassy, 2025</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item bloom" style="animation-delay: 0.9s" onclick="openModal(5)">
+                    <img src="image/dublin5.jpg" alt="Guinness Storehouse">
+                    <div class="overlay">
+                        <div class="caption">Street Shot, 2025</div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modal-image" src="" alt="">
+            <div class="modal-text" id="modal-text"></div>
+            <button onclick="closeModal()" class="btn modal-close-btn">Close</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 [Yuanfeng Luo] — Digital Garden Project02</p>
+    </footer>
+    
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/dublin.js"></script>
+</body>
+</html>
