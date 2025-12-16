@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 可以在这里调节拼贴图照片的大小，修改下面的值（单位：px） */
+    --item-size: 500px;
+}
+  
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Welcome Section */
+.welcome-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    z-index: 1000;
+    transition: opacity 0.8s ease-out, visibility 0.8s ease-out;
+}
+
+.welcome-section.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.welcome-text {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Video Section */
+.video-section {
+    min-height: 100vh;
+    padding: 100px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    position: relative;
+}
+
+.main-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-description {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: justify;
+}
+
+/* Collage Section */
+.collage-section {
+    min-height: 100vh;
+    padding: 100px 20px 40px;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.pile {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+.spacer {
+    flex: 1;
+    min-height: 0;
+}
+
+.item-card {
+    position: absolute;
+    /* 可以在这里调节照片大小，修改下面的 width 和 height 值 */
+    width: var(--item-size, 150px);
+    height: var(--item-size, 150px);
+    cursor: pointer;
+    transform: translate(var(--x), var(--y)) rotate(var(--r));
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+}
+
+.item-card:hover {
+    transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(1.1);
+    z-index: 10;
+}
+
+.item-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 白色边框已移除，如需添加边框，可以取消下面的注释 */
+    /* border: 2px solid #ffffff; */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Shop Section */
+.shop-section {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.shop-button {
+    padding: 20px 60px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+}
+
+.shop-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s;
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    padding: 40px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    color: #ffffff;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: 300;
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+#modalBody {
+    margin-top: 20px;
+}
+
+#modalBody img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+#modalBody h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+#modalBody p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 2.5rem;
+    }
+
+    .video-section {
+        padding: 80px 15px 40px;
+    }
+
+    .video-description {
+        font-size: 0.85rem;
+    }
+
+    .pile {
+        width: 100%;
+        height: 600px;
+    }
+
+    .item-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+    }
+}
+

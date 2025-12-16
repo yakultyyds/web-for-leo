@@ -60,8 +60,8 @@ const products = [
     },
     {
         id: 9,
-        title: "GOne Manhattan Square",
-        price: "$49.99",
+        title: "One Manhattan Square",
+        price: "$89,000,000",
         rating: "4.6",
         image: "images/9.jpg",
         hoverImage: "images/92.jpg"
@@ -69,71 +69,71 @@ const products = [
     {
         id: 10,
         title: "The San Remo",
-        price: "$39.99",
+        price: "$89,000,000",
         rating: "4.4",
         image: "images/10.jpg",
         hoverImage: "images/102.jpg"
     },
     {
         id: 11,
-        title: "External Hard Drive 1The Plaza Residences",
-        price: "$59.99",
+        title: "101 Wall Street",
+        price: "$45,000,000",
         rating: "4.5",
         image: "images/11.jpg",
         hoverImage: "images/112.jpg"
     },
     {
         id: 12,
-        title: "Phone Stand Adjustable Angle",
-        price: "$9.99",
+        title: "70 Pine Street",
+        price: "$47,000,000",
         rating: "4.3",
-        image: "images/11.jpg",
+        image: "images/12'.jpg",
         hoverImage: "images/122.jpg"
     },
     {
         id: 13,
-        title: "Desk Lamp LED Eye Care",
-        price: "$29.99",
+        title: "50 West 66th Street",
+        price: "$27,000,000",
         rating: "4.6",
         image: "images/13.jpg",
         hoverImage: "images/132.jpg"
     },
     {
         id: 14,
-        title: "Bluetooth Speaker Wireless",
-        price: "$59.99",
+        title: "277 Fifth Avenue",
+        price: "$29,000,000",
         rating: "4.7",
         image: "images/14.jpg",
         hoverImage: "images/142.jpg"
     },
     {
         id: 15,
-        title: "Keyboard Cleaning Kit",
-        price: "$7.99",
+        title: "The Getty Residences",
+        price: "$190,000,000",
         rating: "4.1",
         image: "images/15.jpg",
         hoverImage: "images/152.jpg"
     },
     {
         id: 16,
-        title: "USB Hub Multi-Port",
-        price: "$24.99",
+        title: "56 Leonard Street",
+        price: "$47,000,000",
         rating: "4.4",
         image: "images/16.jpg",
         hoverImage: "images/162.jpg"
     },
     {
         id: 17,
-        title: "Mouse Pad Large Size",
-        price: "$12.99",
+        title: "125 Greenwich Street",
+        price: "$47,000,000",
         rating: "4.2",
         image: "images/17.jpg",
         hoverImage: "images/172.jpg"
     },
     {
         id: 18,
-        title: "Screen Cleaning Cloth Microfiber",
-        price: "$5.99",
+        title: "One Wall Street",
+        price: "$17,000,000",
         rating: "4.0",
         image: "images/18.jpg",
         hoverImage: "images/182.jpg"
