@@ -41,7 +41,6 @@ const products = [
         image: "images/5.jpg",
         hoverImage: "images/52.jpg"
     },
-   
     {
         id: 7,
         title: "Thomas Juul-Hansen Skyscraper is Tallest on Manhattan’s East Side",
